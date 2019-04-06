@@ -1,0 +1,30 @@
+{
+  "name": "terra-farm.ui",
+  "version": "0.0.1",
+  "description": "Styling for the Antora based Terra-Farm website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terra-farm/terra-farm.ui.git"
+  },
+  "homepage": "https://github.com/terra-farm/terra-farm.ui#readme.adoc",
+  "keywords": [
+    "terraform",
+    "antora",
+    "ui"
+  ],
+  "author": "Ringo De Smet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/terra-farm/terra-farm.ui/issues"
+  },
+  "devDependencies": {
+    "neutrino": "^9.0.0-rc.0",
+    "neutrino-preset-antora-ui": "../../personal/neutrino-preset-antora-ui",
+    "webpack": ">= 4",
+    "webpack-cli": ">= 3"
+  }
+}
