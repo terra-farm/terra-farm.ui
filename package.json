@@ -22,7 +22,7 @@
     "url": "https://github.com/terra-farm/terra-farm.ui/issues"
   },
   "devDependencies": {
-    "neutrino": "^9.0.0-rc.0",
+    "neutrino": "^9.0.0-rc.3",
     "neutrino-preset-antora-ui": "../../personal/neutrino-preset-antora-ui",
     "webpack": ">= 4",
     "webpack-cli": ">= 3"
