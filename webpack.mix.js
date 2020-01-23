@@ -1,3 +1,7 @@
 const mix = require('laravel-mix');
 
-mix.sass('src/sass/theme.scss', 'src/css')
+const destDir = 'public';
+
+mix.sass('src/sass/site.scss', `${destDir}/css`)
+    .copy('src/layouts', `${destDir}/layouts`)
+    .copy('src/partials', `${destDir}/partials`);
