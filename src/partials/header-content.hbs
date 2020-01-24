@@ -14,16 +14,20 @@
                     <a class="navbar-link" href="#">Providers</a>
                     <div class="navbar-dropdown">
                         {{#each site.components}}
-                        <a class="navbar-item" href="{{url}}">{{title}}</a>
+                        {{#if (startsWith name 'provider')}}
+                        <a class="navbar-item" href="{{{relativize @root.page.url ./url}}}">{{title}}</a>
+                        {{/if}}
                         {{/each}}
                     </div>
                 </div>
                 <!--<div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="#">Modules</a>
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="#">Service A</a>
-                        <a class="navbar-item" href="#">Service B</a>
-                        <a class="navbar-item" href="#">Service C</a>
+                        {{#each site.components}}
+                        {{#if (startsWith name 'module')}}
+                        <a class="navbar-item" href="{{{relativize @root.page.url ./url}}}">{{title}}</a>
+                        {{/if}}
+                        {{/each}}
                     </div>
                 </div>-->
             </div>
