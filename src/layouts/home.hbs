@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{{detag (or page.title 'Untitled')}}}{{#if site.title}} :: {{site.title}}{{/if}}</title>
+    {{#if page.canonicalUrl}}
+    <link rel="canonical" href="{{page.canonicalUrl}}">
+    {{/if}}
+    {{#if page.description}}
+    <meta name="description" content="{{page.description}}">
+    {{/if}}
+    {{#if page.keywords}}
+    <meta name="keywords" content="{{page.keywords}}">
+    {{/if}}
+    {{#if (or antoraVersion site.antoraVersion)}}
+    <meta name="generator" content="Antora {{or antoraVersion site.antoraVersion}}">
+    {{/if}}
+    <link rel="stylesheet" href="{{uiRootPath}}/css/site.css">
+    {{> head}}
+</head>
+
+<body class="article">
+    {{> header}}
+    <div class="section has-text-centered">
+        <h1 class="title is-1">Welcome to Terra-Farm!</h1>
+        <p>Terra-Farm is the community maintaining third-party Terraform providers.</p>
+    </div>
+    <div class="section has-text-centered has-background-link">
+        <h2 class="title is-2">Providers</h2>
+        <div class="section">
+            <div class="columns">
+                {{#each site.components}}
+                {{#if (startsWith name 'provider')}}
+                <div class="column">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title">{{title}}</p>
+                        </div>
+                        <footer class="card-footer">
+                            <p class="card-footer-item">
+                                <span>
+                                    <a href="{{{relativize @root.page.url ./url}}}">Documentation {{index}}</a>
+                                </span>
+                            </p>
+                        </footer>
+                    </div>
+                </div>
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{> footer}}
+</body>
+
+</html>
