@@ -7,9 +7,13 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1.2.0
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup NodeJS
+        uses: actions/setup-node@v1.2.0
         with:
           node-version: '10.x'
-      - run: npm install
-      - run: npm run dev
+      - name: Install dependencies
+        run: npm install
+      - name: Build the UI bundle
+        run: npm run dev
