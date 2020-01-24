@@ -24,8 +24,11 @@ mix.extend(
             return [
                 new FileManagerPlugin({
                     onEnd: {
+                        mkdir: [
+                            this.dest
+                        ],
                         archive: [
-                            { source: this.src, destination: `${this.dest}/${this.file}` }                            
+                            { source: this.src, destination: `${this.dest}/${this.file}` }
                         ]
                     }
                 })
