@@ -1,8 +1,10 @@
-{{#if page.navigation}}
-<div class="navigation-menu is-active" data-panel="menu">
-    <nav class="nav-menu">
-        <h3 class="title"><a href="{{relativize page.url page.componentVersion.url}}">{{page.component.title}}</a></h3>
-        {{> navigation-tree navigation=page.navigation}}
-    </nav>
-</div>
+{{#if navigation.length}}
+{{#each navigation}}
+<p class="menu-label">
+{{content}}
+</p>
+<ul class="menu-list">
+    {{> navigation-tree navigation=./items level=(increment ../level)}}
+</ul>
+{{/each}}
 {{/if}}

@@ -1,9 +1,4 @@
-<div class="navigation-container" {{#if page.component}} data-component="{{page.component.name}}"
-    data-version="{{page.version}}" {{/if}}>
-    <aside class="navigation">
-        <div class="panels">
-            {{> navigation-menu}}
-            {{> navigation-explore}}
-        </div>
-    </aside>
-</div>
+{{#if page.navigation}}
+<h5 class="subtitle is-5">{{page.component.title}}</h5>
+{{> navigation-menu navigation=page.navigation}}
+{{/if}}
