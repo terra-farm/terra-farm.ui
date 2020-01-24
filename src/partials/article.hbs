@@ -1,6 +1,6 @@
 <article class="doc">
     {{#if (eq page.layout '404')}}
-    <h1>{{{or page.title 'Page Not Found'}}}</h1>
+    <h3 class="title is-3">{{{or page.title 'Page Not Found'}}}</h3>
     <div class="paragraph">
         <p>The page you're looking for does not exist. It may have been moved.</p>
     </div>
@@ -11,8 +11,9 @@
     </div>
     {{else}}
     {{#if page.title}}
-    <h1>{{{page.title}}}</h1>
+    <h3 class="title is-3">{{{page.title}}}</h3>
     {{/if}}
     {{{page.contents}}}
     {{/if}}
+
 </article>
