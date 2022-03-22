@@ -27,18 +27,18 @@
     "url": "https://github.com/terra-farm/terra-farm.ui/issues"
   },
   "devDependencies": {
-    "cross-env": "^6.0.3",
-    "filemanager-webpack-plugin": "^2.0.5",
-    "laravel-mix": "^5.0.1",
-    "resolve-url-loader": "^3.1.0",
-    "sass": "^1.25.0",
-    "sass-loader": "^8.0.2",
-    "webpack": "^4.41.5"
+    "cross-env": "^7.0.3",
+    "filemanager-webpack-plugin": "^6.1.7",
+    "laravel-mix": "^6.0.43",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "webpack": "^5.70.0"
   },
   "volta": {
     "node": "14.19.1"
   },
   "dependencies": {
-    "bulma": "^0.8.0"
+    "bulma": "^0.9.3"
   }
 }
