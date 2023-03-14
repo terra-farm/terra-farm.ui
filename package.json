@@ -33,7 +33,7 @@
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
-    "webpack": "^5.70.0"
+    "webpack": "^5.76.0"
   },
   "volta": {
     "node": "14.19.1"
